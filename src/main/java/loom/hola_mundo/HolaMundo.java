@@ -1,14 +1,28 @@
+
 package loom.hola_mundo;
 
+/**
+ * @author FedeMarkoo
+ *
+ */
 public class HolaMundo {
 
+    /**
+     * Saluda a la persona.
+     * Este método recibe por parametro el nombre de la persona
+     * y devuelve un String saludando por su nombre.
+     *
+     * @param persona a saludar.
+     * @return persona saludada.
+     */
+
 	public String saludar(final String persona) {
-		String nuevo = ""; // Creo una String nueva para usar de "buffer" para poner en CamelCase
-		for (String cad : persona.split(" ")) { // separo el nombre en espacios para obtener los nombres y apellidos
-			nuevo += (cad.charAt(0) + "").toUpperCase(); // con esto obtengo la primer letra y la pongo en mayuscula
-			nuevo += cad.substring(1).toLowerCase(); // con esto obtengo el resto del nombre para poner en minuscula
-			nuevo += " "; // aca agrego el espacio que lo borra el split
+		String nuevo = "";
+		for (String cad : persona.split(" ")) {
+			nuevo += (cad.charAt(0) + "").toUpperCase(); 
+			nuevo += cad.substring(1).toLowerCase(); 
+			nuevo += " "; 
 		}
-		return "¡Hola, " + nuevo.trim() + "!"; // formateo la salida con el nombre y todo como pide el ejercicio
+		return "¡Hola, " + nuevo.trim() + "!"; 
 	}
 }
